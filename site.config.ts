@@ -135,7 +135,7 @@ export const site = {
       image: {
         src: "",
         alt: "Freshly painted living room with smooth light gray walls, crisp white trim, and a clean white ceiling in a Michigan home",
-        placeholderLabel: "Interior — finished living room",
+        placeholderLabel: "Interior: finished living room",
       },
       seoTitle: "Interior Painting | Jaws Painting",
       seoDescription:
@@ -160,7 +160,7 @@ export const site = {
       image: {
         src: "",
         alt: "Freshly painted two-story home exterior with crisp white trim and a clean front door in a Southeast Michigan neighborhood",
-        placeholderLabel: "Exterior — repainted home",
+        placeholderLabel: "Exterior: repainted home",
       },
       seoTitle: "Exterior Painting | Jaws Painting",
       seoDescription:
@@ -185,7 +185,7 @@ export const site = {
       image: {
         src: "",
         alt: "Freshly refinished white kitchen cabinets with a smooth sprayed finish in a Michigan home",
-        placeholderLabel: "Cabinets — refinished kitchen",
+        placeholderLabel: "Cabinets: refinished kitchen",
       },
       seoTitle: "Cabinet Refinishing | Jaws Painting",
       seoDescription:
@@ -209,7 +209,7 @@ export const site = {
       image: {
         src: "",
         alt: "Freshly stained backyard wood deck with a rich brown finish and matching fence behind it",
-        placeholderLabel: "Deck & fence — fresh stain",
+        placeholderLabel: "Deck & fence: fresh stain",
       },
       seoTitle: "Deck & Fence Staining | Jaws Painting",
       seoDescription:
@@ -234,7 +234,7 @@ export const site = {
       image: {
         src: "",
         alt: "Smooth repaired and primed drywall wall in a living room with no visible patch lines, ready for paint",
-        placeholderLabel: "Drywall — repaired and paint-ready",
+        placeholderLabel: "Drywall: repaired and paint-ready",
       },
       seoTitle: "Drywall Repair | Jaws Painting",
       seoDescription:
@@ -259,7 +259,7 @@ export const site = {
       image: {
         src: "",
         alt: "Freshly painted open office with clean white walls and a neutral accent wall, ready for the workday",
-        placeholderLabel: "Commercial — finished office",
+        placeholderLabel: "Commercial: finished office",
       },
       seoTitle: "Commercial Painting | Jaws Painting",
       seoDescription:
@@ -386,22 +386,22 @@ export const site = {
     hero: {
       src: "",
       alt: "Freshly painted two-story home exterior with crisp white trim on a sunny day",
-      placeholderLabel: "Hero — painted home exterior (the strongest shot)",
+      placeholderLabel: "Hero: painted home exterior (the strongest shot)",
     },
     whyUs: {
       src: "",
       alt: "A painter rolling a smooth, even coat onto an interior wall",
-      placeholderLabel: "Why us — painter at work",
+      placeholderLabel: "Why us: painter at work",
     },
     process: {
       src: "",
       alt: "Close-up of painter's tape lining a window frame during prep work",
-      placeholderLabel: "Process — prep and taping",
+      placeholderLabel: "Process: prep and taping",
     },
     about: {
       src: "",
       alt: "A work truck and ladders parked outside a home on a paint job",
-      placeholderLabel: "About — crew / work truck",
+      placeholderLabel: "About: crew / work truck",
     },
   } satisfies Record<string, SiteImage>,
 

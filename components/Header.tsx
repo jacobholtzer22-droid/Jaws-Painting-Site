@@ -41,7 +41,7 @@ export default function Header() {
         <Link
           href="/"
           className="h-display text-lg text-bone sm:text-xl"
-          aria-label={`${site.business.name} — home`}
+          aria-label={`${site.business.name}, home`}
         >
           {site.business.shortName}
           <span className="text-chrome">.</span>
@@ -57,7 +57,9 @@ export default function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={`text-sm font-medium transition-colors ${
-                  active ? "text-chrome" : "text-steel-light hover:text-bone"
+                  active
+                    ? "text-bone underline decoration-chrome decoration-2 underline-offset-[6px]"
+                    : "text-steel-light hover:text-bone"
                 }`}
               >
                 {item.label}
@@ -117,7 +119,9 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   aria-current={active ? "page" : undefined}
                   className={`border-b border-white/5 py-3 text-base font-medium transition-colors ${
-                    active ? "text-chrome" : "text-steel-light hover:text-bone"
+                    active
+                    ? "text-bone underline decoration-chrome decoration-2 underline-offset-[6px]"
+                    : "text-steel-light hover:text-bone"
                   }`}
                 >
                   {item.label}
