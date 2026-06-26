@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Anchor links land below the sticky header, not under it. */
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: #c5161d;
+    color: #f4f4f2;
+  }
+
+  /* Visible keyboard focus everywhere — never remove the outline silently. */
+  :focus-visible {
+    outline: 2px solid #c5161d;
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* Respect reduced-motion: kill smooth scroll + animations. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  /* Eyebrow: deep red on light bands (AA on off-white). Dark-band eyebrows
+   * override to text-bone (cream) inline — red on navy fails AA. */
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.18em] text-chrome-deep;
+  }
+
+  /* Display headings — Bricolage, sentence case, tight and confident. */
+  .h-display {
+    @apply font-display font-extrabold leading-[1.04] tracking-[-0.02em];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-body text-sm font-semibold transition-colors duration-200 focus-visible:outline-offset-4;
+  }
+
+  .btn-primary {
+    @apply btn bg-chrome px-6 py-3.5 text-white hover:bg-chrome-dark;
+  }
+
+  .btn-ghost {
+    @apply btn border border-steel/40 bg-transparent px-6 py-3.5 text-bone hover:border-bone/60 hover:bg-white/5;
+  }
+
+  .btn-dark {
+    @apply btn border border-ink/15 bg-ink px-6 py-3.5 text-bone hover:bg-panel;
+  }
+
+  /* Thin red divider — a subtle accent between bands. */
+  .chrome-rule {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-chrome/50 to-transparent;
+  }
+}
