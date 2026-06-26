@@ -55,7 +55,8 @@ until real photos are dropped into `/public/images` and their `src` is set.
 - [ ] Confirm the real business **name**, **phone**, and email.
 - [ ] Confirm the **service list** (currently interior, exterior, cabinet
       refinishing, deck & fence staining, drywall repair, commercial).
-- [ ] Drop in the 10 photos and set their `src` in `site.config.ts` (see `PHOTOS.md`).
+- [ ] Swap the temporary licensed stock photos in `/public/images` for the client's
+      real job photos (see `PHOTOS.md` — same filenames means a one-file drop-in).
 - [ ] Confirm `serviceArea.towns` (SE-Michigan placeholders).
 - [ ] Confirm `hours`.
 - [ ] Add real Google review quotes to `reviews.quotes`, set `reviews.rating`, and

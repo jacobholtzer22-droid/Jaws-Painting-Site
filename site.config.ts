@@ -133,8 +133,8 @@ export const site = {
         "Full cleanup and room put back in place",
       ],
       image: {
-        src: "",
-        alt: "Freshly painted living room with smooth light gray walls, crisp white trim, and a clean white ceiling in a Michigan home",
+        src: "/images/service-interior.jpg",
+        alt: "A freshly painted living room with smooth neutral walls, crisp white trim, and a clean finish",
         placeholderLabel: "Interior: finished living room",
       },
       seoTitle: "Interior Painting | Jaws Painting",
@@ -158,8 +158,8 @@ export const site = {
         "Free quote and full cleanup when the job is done",
       ],
       image: {
-        src: "",
-        alt: "Freshly painted two-story home exterior with crisp white trim and a clean front door in a Southeast Michigan neighborhood",
+        src: "/images/service-exterior.jpg",
+        alt: "A painter on a ladder applying a fresh coat to the exterior of a home",
         placeholderLabel: "Exterior: repainted home",
       },
       seoTitle: "Exterior Painting | Jaws Painting",
@@ -183,8 +183,8 @@ export const site = {
         "Cleanup and reassembly when the work is done",
       ],
       image: {
-        src: "",
-        alt: "Freshly refinished white kitchen cabinets with a smooth sprayed finish in a Michigan home",
+        src: "/images/service-cabinets.jpg",
+        alt: "A bright kitchen with crisp white cabinets and a clean, even finish",
         placeholderLabel: "Cabinets: refinished kitchen",
       },
       seoTitle: "Cabinet Refinishing | Jaws Painting",
@@ -207,8 +207,8 @@ export const site = {
         "Decks, fences, railings, and other exterior wood",
       ],
       image: {
-        src: "",
-        alt: "Freshly stained backyard wood deck with a rich brown finish and matching fence behind it",
+        src: "/images/service-deck-fence.jpg",
+        alt: "A wood deck with a fresh stain and clean railings in a backyard",
         placeholderLabel: "Deck & fence: fresh stain",
       },
       seoTitle: "Deck & Fence Staining | Jaws Painting",
@@ -232,8 +232,8 @@ export const site = {
         "Floors and furniture covered, dust kept down",
       ],
       image: {
-        src: "",
-        alt: "Smooth repaired and primed drywall wall in a living room with no visible patch lines, ready for paint",
+        src: "/images/service-drywall.jpg",
+        alt: "A smooth, freshly finished wall in an empty room, primed and ready for paint",
         placeholderLabel: "Drywall: repaired and paint-ready",
       },
       seoTitle: "Drywall Repair | Jaws Painting",
@@ -257,8 +257,8 @@ export const site = {
         "Free written quote before we start",
       ],
       image: {
-        src: "",
-        alt: "Freshly painted open office with clean white walls and a neutral accent wall, ready for the workday",
+        src: "/images/service-commercial.jpg",
+        alt: "A freshly painted open-plan office with clean walls, ready for the workday",
         placeholderLabel: "Commercial: finished office",
       },
       seoTitle: "Commercial Painting | Jaws Painting",
@@ -384,24 +384,19 @@ export const site = {
    */
   images: {
     hero: {
-      src: "",
-      alt: "Freshly painted two-story home exterior with crisp white trim on a sunny day",
+      src: "/images/hero-exterior.jpg",
+      alt: "A freshly painted two-story home with gray siding, crisp trim, and a tidy front lawn",
       placeholderLabel: "Hero: painted home exterior (the strongest shot)",
     },
     whyUs: {
-      src: "",
+      src: "/images/why-us.jpg",
       alt: "A painter rolling a smooth, even coat onto an interior wall",
       placeholderLabel: "Why us: painter at work",
     },
     process: {
-      src: "",
-      alt: "Close-up of painter's tape lining a window frame during prep work",
-      placeholderLabel: "Process: prep and taping",
-    },
-    about: {
-      src: "",
-      alt: "A work truck and ladders parked outside a home on a paint job",
-      placeholderLabel: "About: crew / work truck",
+      src: "/images/process-prep.jpg",
+      alt: "Close-up of a paint roller laying down a smooth, even coat",
+      placeholderLabel: "Process: prep and paint",
     },
   } satisfies Record<string, SiteImage>,
 
