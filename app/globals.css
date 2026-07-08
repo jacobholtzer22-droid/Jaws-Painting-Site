@@ -38,7 +38,9 @@
     *::after {
       animation-duration: 0.001ms !important;
       animation-iteration-count: 1 !important;
+      animation-delay: 0ms !important;
       transition-duration: 0.001ms !important;
+      transition-delay: 0ms !important;
     }
   }
 }
@@ -59,12 +61,14 @@
     @apply font-display font-extrabold leading-[1.04] tracking-[-0.02em];
   }
 
+  /* Buttons: color/shadow/transform transitions; gentle press feedback on all,
+   * a small hover lift on the prominent solid CTAs. Transform/opacity only. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl font-body text-sm font-semibold transition-colors duration-200 focus-visible:outline-offset-4;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-body text-sm font-semibold transition-[color,background-color,border-color,box-shadow,transform] duration-200 ease-out active:scale-[0.97] focus-visible:outline-offset-4;
   }
 
   .btn-primary {
-    @apply btn bg-chrome px-6 py-3.5 text-white hover:bg-chrome-dark;
+    @apply btn bg-chrome px-6 py-3.5 text-white hover:-translate-y-0.5 hover:bg-chrome-dark hover:shadow-card-hover;
   }
 
   .btn-ghost {
@@ -72,11 +76,20 @@
   }
 
   .btn-dark {
-    @apply btn border border-ink/15 bg-ink px-6 py-3.5 text-bone hover:bg-panel;
+    @apply btn border border-ink/15 bg-ink px-6 py-3.5 text-bone hover:-translate-y-0.5 hover:bg-panel;
   }
 
   /* Thin red divider — a subtle accent between bands. */
   .chrome-rule {
     @apply h-px w-full bg-gradient-to-r from-transparent via-chrome/50 to-transparent;
+  }
+
+  /* Barely-perceptible top highlight for dark bands (adds depth without notice). */
+  .sheen-top {
+    background-image: radial-gradient(
+      120% 70% at 50% 0%,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0) 55%
+    );
   }
 }
