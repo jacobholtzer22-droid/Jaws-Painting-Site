@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ServiceCard from "@/components/ServiceCard";
 import CtaBand from "@/components/CtaBand";
+import ScrollReveal from "@/components/ScrollReveal";
 import { site } from "@/site.config";
 import { pageMetadata } from "@/lib/seo";
 
@@ -18,13 +19,16 @@ export default function ServicesPage() {
       />
       <section className="bg-bone py-16 text-ink sm:py-20">
         <div className="container-page">
-          <ul className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+          <ScrollReveal
+            as="ul"
+            className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 shadow-card sm:grid-cols-2 lg:grid-cols-3"
+          >
             {services.map((service) => (
               <li key={service.slug} className="flex">
                 <ServiceCard service={service} />
               </li>
             ))}
-          </ul>
+          </ScrollReveal>
         </div>
       </section>
       <CtaBand />

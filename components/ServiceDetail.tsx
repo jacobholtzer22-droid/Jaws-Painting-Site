@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { site, type ServiceItem } from "@/site.config";
 import ImagePlaceholder from "./ImagePlaceholder";
+import ScrollReveal from "./ScrollReveal";
 
 /** Body of a /services/<slug>/ detail page: banner + overview + what's included + other services. */
 export default function ServiceDetail({ service }: { service: ServiceItem }) {
@@ -14,15 +15,16 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
       {/* Banner photo + overview + what's included — bone band */}
       <section className="bg-bone py-16 text-ink sm:py-20">
         <div className="container-page">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-ink/10 sm:aspect-[21/9]">
+          <ScrollReveal className="group relative aspect-[16/9] overflow-hidden rounded-2xl border border-ink/10 shadow-card sm:aspect-[21/9]">
             <ImagePlaceholder
               image={service.image}
               sizes="(min-width: 1200px) 1136px, 100vw"
+              className="transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
             />
-          </div>
+          </ScrollReveal>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-            <div>
+            <ScrollReveal>
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-ink text-chrome">
                 <Icon className="h-7 w-7" aria-hidden="true" />
               </span>
@@ -32,9 +34,12 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
               <a href={cta.href} className="btn-dark mt-8 px-7 py-4 text-base">
                 {cta.label}
               </a>
-            </div>
+            </ScrollReveal>
 
-            <div className="rounded-2xl border border-ink/10 bg-white/60 p-7 sm:p-8">
+            <ScrollReveal
+              delay={120}
+              className="rounded-2xl border border-ink/10 bg-white/60 p-7 shadow-card sm:p-8"
+            >
               <h2 className="h-display text-lg text-ink">
                 {servicesPage.detailIncludesHeading}
               </h2>
@@ -54,7 +59,7 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -62,15 +67,22 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
       {/* Other services — ink band */}
       <section className="bg-ink py-16 text-bone sm:py-20">
         <div className="container-page">
-          <p className="eyebrow mb-6 text-bone">{servicesPage.detailOtherHeading}</p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ScrollReveal>
+            <p className="eyebrow mb-6 text-bone">
+              {servicesPage.detailOtherHeading}
+            </p>
+          </ScrollReveal>
+          <ScrollReveal
+            delay={80}
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {others.map((s) => {
               const OIcon = s.icon;
               return (
                 <Link
                   key={s.slug}
                   href={`/services/${s.slug}/`}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-panel p-5 transition-colors hover:border-chrome/50"
+                  className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-panel p-5 transition-[transform,border-color] duration-200 ease-out hover:-translate-y-0.5 hover:border-chrome/50"
                 >
                   <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-ink text-chrome">
                     <OIcon className="h-5 w-5" aria-hidden="true" />
@@ -85,7 +97,7 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
                 </Link>
               );
             })}
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
