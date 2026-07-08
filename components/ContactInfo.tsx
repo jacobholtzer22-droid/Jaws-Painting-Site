@@ -37,7 +37,7 @@ export default function ContactInfo({ tone = "dark", className = "" }: Props) {
   );
 
   return (
-    <div className={`rounded-2xl border p-6 sm:p-7 ${card} ${className}`}>
+    <div className={`rounded-2xl border p-6 shadow-card sm:p-7 ${card} ${className}`}>
       <h2 className={`h-display text-lg ${value}`}>Contact info</h2>
 
       <div className="mt-5 space-y-4">

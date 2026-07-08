@@ -47,7 +47,7 @@ export default function ContactForm() {
   /* ---- Success: replace the form ---- */
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-ink/10 bg-white p-8 text-center sm:p-12">
+      <div className="rounded-2xl border border-ink/10 bg-white p-8 text-center shadow-card sm:p-12">
         <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-chrome/20 text-chrome-dark">
           <Check className="h-7 w-7" aria-hidden="true" />
         </span>
@@ -77,7 +77,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border border-ink/10 bg-white p-6 sm:p-8"
+      className="rounded-2xl border border-ink/10 bg-white p-6 shadow-card sm:p-8"
       noValidate
     >
       <div className="grid gap-5 sm:grid-cols-2">

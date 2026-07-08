@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
+import ScrollReveal from "@/components/ScrollReveal";
 import { site } from "@/site.config";
 import { pageMetadata } from "@/lib/seo";
 
@@ -18,8 +19,12 @@ export default function QuotePage() {
       />
       <section className="bg-bone py-16 text-ink sm:py-20">
         <div className="container-page grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <ContactForm />
-          <ContactInfo tone="bone" />
+          <ScrollReveal>
+            <ContactForm />
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <ContactInfo tone="bone" />
+          </ScrollReveal>
         </div>
       </section>
     </>
