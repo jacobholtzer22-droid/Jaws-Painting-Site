@@ -49,7 +49,13 @@ const config: Config = {
         },
       },
       animation: {
-        "fade-up": "fade-up 0.6s ease-out both",
+        "fade-up": "fade-up 0.5s ease-out both",
+      },
+      boxShadow: {
+        // Navy-tinted elevation for cards on light bands (subtle, consistent scale).
+        card: "0 1px 2px rgba(10, 31, 68, 0.04), 0 6px 20px rgba(10, 31, 68, 0.06)",
+        "card-hover":
+          "0 8px 20px rgba(10, 31, 68, 0.10), 0 18px 40px rgba(10, 31, 68, 0.12)",
       },
     },
   },

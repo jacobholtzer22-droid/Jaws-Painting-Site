@@ -1,13 +1,14 @@
 import { Phone } from "lucide-react";
 import { site } from "@/site.config";
+import ScrollReveal from "./ScrollReveal";
 
 /** Closing CTA band used at the bottom of the Home and About pages. */
 export default function CtaBand() {
   const { ctaBand, cta, business } = site;
 
   return (
-    <section className="bg-panel-dark py-20 text-bone sm:py-24">
-      <div className="container-page flex flex-col items-center gap-7 text-center">
+    <section className="sheen-top bg-panel-dark py-20 text-bone sm:py-24">
+      <ScrollReveal className="container-page flex flex-col items-center gap-7 text-center">
         <div>
           <h2 className="h-display text-3xl text-bone sm:text-4xl">
             {ctaBand.heading}
@@ -25,7 +26,7 @@ export default function CtaBand() {
             {business.phoneDisplay}
           </a>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

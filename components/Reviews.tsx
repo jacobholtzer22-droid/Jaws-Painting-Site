@@ -1,5 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { site } from "@/site.config";
+import ScrollReveal from "./ScrollReveal";
 
 function Stars({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -17,9 +18,9 @@ export default function Reviews() {
   const hasReviewLink = reviews.reviewUrl.trim().length > 0;
 
   return (
-    <section id="reviews" className="bg-ink py-20 text-bone sm:py-28">
+    <section id="reviews" className="sheen-top bg-ink py-20 text-bone sm:py-28">
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
+        <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow mb-4 text-bone">{reviews.eyebrow}</p>
           <h2 className="h-display text-3xl text-bone sm:text-4xl">
             {reviews.heading}
@@ -52,56 +53,55 @@ export default function Reviews() {
               {reviews.reviewCtaLabel}
             </a>
           )}
-        </div>
+        </ScrollReveal>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
           {reviews.quotes.map((review, i) => {
             const hasQuote = review.quote.trim().length > 0;
             return (
-              <figure
-                key={i}
-                className="flex flex-col rounded-2xl border border-white/10 bg-panel p-7"
-              >
-                {hasQuote ? (
-                  <>
-                    <Quote className="h-7 w-7 text-chrome/70" aria-hidden="true" />
-                    <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-bone">
-                      “{review.quote}”
-                    </blockquote>
-                    <figcaption className="mt-5 text-sm font-semibold text-steel-light">
-                      {review.author}
-                      {review.context ? (
-                        <span className="font-normal text-steel">
-                          {" "}
-                          · {review.context}
-                        </span>
-                      ) : null}
-                    </figcaption>
-                  </>
-                ) : (
-                  /* Placeholder — paste a real review in site.config.ts, never invent. */
-                  <div className="flex flex-1 flex-col justify-center rounded-xl border border-dashed border-steel/30 p-6 text-center">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-steel">
-                      {reviews.placeholderLabel} {i + 1}
-                    </span>
-                    <span className="mt-1 text-xs text-steel/70">
-                      {reviews.placeholderHint}
-                    </span>
-                  </div>
-                )}
-              </figure>
+              <ScrollReveal key={i} as="div" delay={i * 80} className="h-full">
+                <figure className="flex h-full flex-col rounded-2xl border border-white/10 bg-panel p-7 transition-[transform,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-chrome/40">
+                  {hasQuote ? (
+                    <>
+                      <Quote className="h-7 w-7 text-chrome/70" aria-hidden="true" />
+                      <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-bone">
+                        “{review.quote}”
+                      </blockquote>
+                      <figcaption className="mt-5 text-sm font-semibold text-steel-light">
+                        {review.author}
+                        {review.context ? (
+                          <span className="font-normal text-steel">
+                            {" "}
+                            · {review.context}
+                          </span>
+                        ) : null}
+                      </figcaption>
+                    </>
+                  ) : (
+                    /* Placeholder — paste a real review in site.config.ts, never invent. */
+                    <div className="flex flex-1 flex-col justify-center rounded-xl border border-dashed border-steel/30 p-6 text-center">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-steel">
+                        {reviews.placeholderLabel} {i + 1}
+                      </span>
+                      <span className="mt-1 text-xs text-steel/70">
+                        {reviews.placeholderHint}
+                      </span>
+                    </div>
+                  )}
+                </figure>
+              </ScrollReveal>
             );
           })}
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-3 text-center">
+        <ScrollReveal className="mt-12 flex flex-col items-center gap-3 text-center">
           <p className="font-display text-base font-semibold text-bone">
             {cta.afterReviewsKicker}
           </p>
           <a href={cta.href} className="btn-primary px-7 py-4 text-base">
             {cta.label}
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
