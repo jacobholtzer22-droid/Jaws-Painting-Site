@@ -56,9 +56,10 @@
     @apply font-display text-xs font-semibold uppercase tracking-[0.18em] text-chrome-deep;
   }
 
-  /* Display headings — Bricolage, sentence case, tight and confident. */
+  /* Display headings — Bricolage, sentence case, tight and confident.
+   * text-balance evens out multi-line headings for a more polished wrap. */
   .h-display {
-    @apply font-display font-extrabold leading-[1.04] tracking-[-0.02em];
+    @apply font-display font-extrabold leading-[1.04] tracking-[-0.02em] text-balance;
   }
 
   /* Buttons: color/shadow/transform transitions; gentle press feedback on all,
