@@ -8,9 +8,9 @@ export default function ServiceCard({ service }: { service: ServiceItem }) {
   return (
     <Link
       href={`/services/${service.slug}/`}
-      className="group flex h-full w-full flex-col gap-4 bg-bone p-7 transition-colors hover:bg-bone-dark focus-visible:bg-bone-dark"
+      className="group flex h-full w-full flex-col gap-4 bg-bone p-7 transition-colors duration-200 hover:bg-bone-dark focus-visible:bg-bone-dark"
     >
-      <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-chrome">
+      <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-chrome transition-transform duration-200 ease-out group-hover:scale-105">
         <Icon className="h-6 w-6" aria-hidden="true" />
       </span>
       <h3 className="font-display text-lg font-bold tracking-tight text-ink">
