@@ -21,8 +21,10 @@ export default function Hero() {
       </div>
 
       <div className="container-page w-full pb-16 pt-28 sm:pb-24">
-        <div className="max-w-2xl animate-fade-up">
-          <p className="eyebrow mb-5 text-bone">{hero.eyebrow}</p>
+        <div className="max-w-2xl">
+          {/* H1 is the LCP element: it stays static and paints instantly.
+           * Only the supporting copy staggers in around it. */}
+          <p className="eyebrow mb-5 animate-fade-up text-bone">{hero.eyebrow}</p>
 
           <h1 className="h-display text-4xl text-bone sm:text-6xl lg:text-7xl">
             {hero.headline.split("\n").map((line, i) => (
@@ -32,11 +34,17 @@ export default function Hero() {
             ))}
           </h1>
 
-          <p className="mt-6 max-w-xl text-base text-steel-light sm:text-lg">
+          <p
+            className="mt-6 max-w-xl animate-fade-up text-base text-steel-light sm:text-lg"
+            style={{ animationDelay: "90ms" }}
+          >
             {hero.sub}
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div
+            className="mt-9 flex animate-fade-up flex-col gap-3 sm:flex-row sm:items-center"
+            style={{ animationDelay: "180ms" }}
+          >
             <a href={cta.href} className="btn-primary px-7 py-4 text-base">
               {hero.primaryCta}
             </a>
@@ -50,7 +58,10 @@ export default function Hero() {
           </div>
 
           {/* Trust strip — proof points only (no star rating until real reviews). */}
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-steel-light">
+          <div
+            className="mt-10 flex animate-fade-up flex-wrap items-center gap-x-6 gap-y-3 text-sm text-steel-light"
+            style={{ animationDelay: "260ms" }}
+          >
             {trust.points.map((p, i) => (
               <span key={p} className="inline-flex items-center gap-2">
                 {i > 0 && (
