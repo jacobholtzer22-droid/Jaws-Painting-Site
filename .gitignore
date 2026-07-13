@@ -35,3 +35,6 @@ next-env.d.ts
 *.heic
 *.MOV
 *.mov
+
+# Raw logo source (optimized versions committed as public/images/logo.png + app/icon.png)
+/Logo/

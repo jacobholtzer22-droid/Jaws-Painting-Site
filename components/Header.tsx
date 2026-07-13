@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
@@ -37,14 +38,21 @@ export default function Header() {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4">
-        {/* Wordmark (TODO: swap for logo image if Joey provides one) */}
+        {/* Brand badge — shown in its cream clear-space so the navy artwork stays
+         * legible on the dark/transparent header. */}
         <Link
           href="/"
-          className="h-display text-lg text-bone sm:text-xl"
+          className="inline-flex items-center"
           aria-label={`${site.business.name}, home`}
         >
-          {site.business.shortName}
-          <span className="text-chrome">.</span>
+          <Image
+            src={site.business.logo}
+            alt=""
+            width={512}
+            height={512}
+            priority
+            className="h-11 w-11 rounded-lg object-contain shadow-sm ring-1 ring-black/5 sm:h-12 sm:w-12"
+          />
         </Link>
 
         {/* Desktop nav */}

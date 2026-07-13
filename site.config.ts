@@ -89,6 +89,10 @@ export const site = {
     region: "Southeast Michigan",
     email: "", // optional — add a public contact email if they want one shown
     address: "", // optional — add a city/area line if they want one shown
+    // Brand badge (cream field + navy/red artwork). Shown in a light tile on dark
+    // surfaces so the navy artwork stays legible. See Header / Footer.
+    logo: "/images/logo.png",
+    logoAlt: "Jaws Painting Co., Michigan",
   },
 
   /* --- Hero (full-bleed photo + headline) --- */
