@@ -342,31 +342,6 @@ export const site = {
     ],
   },
 
-  /* --- Reviews / social proof ---
-   * rating = null keeps the section HONEST: no star number, no count, until the
-   * client provides a real Google rating. Quotes are intentionally EMPTY
-   * placeholder slots — never invent a review. Paste real quotes + first names
-   * when the client provides them, and set `rating` to the real figure.
-   */
-  reviews: {
-    rating: null as number | null,
-    source: "Google",
-    // TODO: paste the client's one-click "leave a review" link (g.page/r/<id>/review).
-    reviewUrl: "",
-    reviewCtaLabel: "Leave us a review",
-    eyebrow: "Reviews",
-    heading: "What homeowners say about our work",
-    sub: "We let the work do the talking. As customers leave reviews, they'll show up right here.",
-    placeholderLabel: "Review coming soon",
-    placeholderHint: "Paste a real Google review in site.config.ts",
-    quotes: [
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-    ] satisfies Review[],
-  },
-
   /* --- Hours ---
    * TODO: confirm the client's real hours. Seeded with typical painting hours.
    */
@@ -439,7 +414,6 @@ export const site = {
   cta: {
     label: "Get a free quote",
     href: "/get-a-quote/",
-    afterReviewsKicker: "Ready to paint? Let's get you a price.",
     callLabel: "Call",
   },
 
