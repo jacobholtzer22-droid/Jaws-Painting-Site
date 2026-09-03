@@ -3,6 +3,8 @@ import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
 import ScrollReveal from "@/components/ScrollReveal";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import { site } from "@/site.config";
 import { pageMetadata } from "@/lib/seo";
 
@@ -12,6 +14,12 @@ export default function QuotePage() {
   const { contact } = site;
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Get a quote", path: "/get-a-quote/" },
+        ])}
+      />
       <PageHeader
         eyebrow={contact.eyebrow}
         title={contact.heading}

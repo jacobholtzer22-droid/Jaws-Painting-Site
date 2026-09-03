@@ -15,15 +15,19 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
       {/* Banner photo + overview + what's included — bone band */}
       <section className="bg-bone py-16 text-ink sm:py-20">
         <div className="container-page">
-          <ScrollReveal className="group relative aspect-[16/9] overflow-hidden rounded-2xl border border-ink/10 shadow-card sm:aspect-[21/9]">
-            <ImagePlaceholder
-              image={service.image}
-              sizes="(min-width: 1200px) 1136px, 100vw"
-              className="transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
-            />
-          </ScrollReveal>
+          {/* Banner only renders when a real per-service photo exists (src set).
+              With src "", no image and no placeholder box render at all. */}
+          {service.image.src ? (
+            <ScrollReveal className="group relative mb-12 aspect-[16/9] overflow-hidden rounded-2xl border border-ink/10 shadow-card sm:aspect-[21/9]">
+              <ImagePlaceholder
+                image={service.image}
+                sizes="(min-width: 1200px) 1136px, 100vw"
+                className="transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
+              />
+            </ScrollReveal>
+          ) : null}
 
-          <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
             <ScrollReveal>
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-ink text-chrome">
                 <Icon className="h-7 w-7" aria-hidden="true" />

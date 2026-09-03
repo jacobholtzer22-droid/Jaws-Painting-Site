@@ -85,6 +85,10 @@ export const site = {
     shortName: "Jaws",
     tagline: "Interior & exterior painting in Southeast Michigan",
     phoneDisplay: "(734) 262-2365", // TODO: confirm the painting line
+    // TODO: Google Ads conversion event
+    // Click-tracking hook for every tel: link. phoneHref renders as a real <a>
+    // anchor in Header, Hero, CtaBand, Footer, ContactInfo, MobileCtaBar and
+    // ContactForm, so a delegated click handler can attach to a[href^="tel:"].
     phoneHref: "tel:+17342622365", // TODO: confirm the painting line
     region: "Southeast Michigan",
     email: "", // optional — add a public contact email if they want one shown
@@ -97,9 +101,9 @@ export const site = {
 
   /* --- Hero (full-bleed photo + headline) --- */
   hero: {
-    eyebrow: "Painters in Southeast Michigan",
-    headline: "A Fresh Coat\nDone Right",
-    sub: "Interior and exterior painting for homes and businesses across Southeast Michigan. Clean lines, careful prep, and a finish you'll be glad you paid for.",
+    eyebrow: "Painting for homes & businesses · Southeast Michigan",
+    headline: "Interior & exterior\npainting, done right",
+    sub: "Walls, ceilings, trim, cabinets, decks, and full exteriors — careful prep, sharp lines, and floors kept protected. Serving homes and businesses across Southeast Michigan.",
     primaryCta: "Get a free quote",
     secondaryCta: "Call us",
   },
@@ -110,7 +114,7 @@ export const site = {
    */
   trust: {
     points: [
-      "Licensed and insured",
+      "Floors and furniture protected",
       "Free, no-pressure quotes",
       "Clean, on-time crews",
     ],
@@ -127,7 +131,7 @@ export const site = {
       description:
         "Fresh paint on your walls, ceilings, trim, and doors. We prep right, cut clean lines, and protect your floors and furniture. Free quotes across Southeast Michigan.",
       longDescription:
-        "Want a room that looks finished, not rushed? We paint walls, ceilings, trim, and doors inside your home. First we patch holes, fill dents, and sand rough spots so the new coat lays down smooth. We cover your furniture and floors before a single brush moves. Then we cut clean lines and roll even coats, no drips on the baseboards, no roller marks on the wall. When we leave, the room is wiped down and put back the way you had it. Licensed and insured, with free quotes anywhere in Southeast Michigan.",
+        "Want a room that looks finished, not rushed? We paint walls, ceilings, trim, and doors inside your home. First we patch holes, fill dents, and sand rough spots so the new coat lays down smooth. We cover your furniture and floors before a single brush moves. Then we cut clean lines and roll even coats, no drips on the baseboards, no roller marks on the wall. When we leave, the room is wiped down and put back the way you had it. Free quotes anywhere in Southeast Michigan.",
       includes: [
         "Walls, ceilings, trim, and doors painted",
         "Patching, filling, and sanding before we paint",
@@ -137,13 +141,13 @@ export const site = {
         "Full cleanup and room put back in place",
       ],
       image: {
-        src: "/images/service-interior.jpg",
+        src: "",
         alt: "A freshly painted living room with smooth neutral walls, crisp white trim, and a clean finish",
         placeholderLabel: "Interior: finished living room",
       },
       seoTitle: "Interior Painting | Jaws Painting",
       seoDescription:
-        "Jaws Painting handles interior walls, ceilings, trim, and doors across Southeast Michigan. Careful prep, clean lines, protected floors. Free quotes. Licensed and insured.",
+        "Jaws Painting handles interior walls, ceilings, trim, and doors across Southeast Michigan. Careful prep, clean lines, protected floors. Free quotes.",
       icon: Paintbrush2,
     },
     {
@@ -152,7 +156,7 @@ export const site = {
       description:
         "Fresh paint that holds up to Michigan weather. We wash, scrape, prime, and coat your siding, trim, and doors so your home looks sharp and stays protected for years.",
       longDescription:
-        "Your home takes a beating out here. Sun, rain, snow, and big swings in temperature all wear paint down fast. We give you a finish built to handle it. First we power wash off the dirt and old buildup. Then we scrape loose paint, sand rough spots, and prime bare wood so the new coat grips and lasts. We use weather-rated paint made for Michigan, and we cut clean lines on every door, window, and piece of trim. When we leave, the yard is clean and your home looks fresh and well kept. Licensed and insured, with free quotes.",
+        "Your home takes a beating out here. Sun, rain, snow, and big swings in temperature all wear paint down fast. We give you a finish built to handle it. First we power wash off the dirt and old buildup. Then we scrape loose paint, sand rough spots, and prime bare wood so the new coat grips and lasts. We use weather-rated paint made for Michigan, and we cut clean lines on every door, window, and piece of trim. When we leave, the yard is clean and your home looks fresh and well kept. Free quotes, no obligation.",
       includes: [
         "Power washing to strip dirt, mildew, and chalking before we paint",
         "Scraping, sanding, and priming bare or peeling spots",
@@ -162,13 +166,13 @@ export const site = {
         "Free quote and full cleanup when the job is done",
       ],
       image: {
-        src: "/images/service-exterior.jpg",
+        src: "",
         alt: "A painter on a ladder applying a fresh coat to the exterior of a home",
         placeholderLabel: "Exterior: repainted home",
       },
       seoTitle: "Exterior Painting | Jaws Painting",
       seoDescription:
-        "Exterior house painting in Southeast Michigan. We wash, scrape, prime, and paint siding, trim, and doors with weather-rated paint. Licensed, insured, free quotes.",
+        "Exterior house painting in Southeast Michigan. We wash, scrape, prime, and paint siding, trim, and doors with weather-rated paint. Free quotes.",
       icon: Home,
     },
     {
@@ -177,7 +181,7 @@ export const site = {
       description:
         "Give your kitchen a fresh look without ripping out the cabinets. We degrease, sand, and spray a smooth, durable finish on your doors and boxes across Southeast Michigan.",
       longDescription:
-        "New cabinets cost a fortune. Refinishing gets you a brand new look for a lot less. We take down your doors and drawer fronts, then degrease and sand every surface so the new finish actually grips. We fill dings, smooth things out, and spray the doors, drawers, and boxes for a clean, even coat with no brush marks. The result holds up to daily kitchen use, splashes, and wiping down. Works on kitchen and bathroom cabinets. We keep your space clean and put everything back when we are done. Licensed and insured, with free quotes.",
+        "New cabinets cost a fortune. Refinishing gets you a brand new look for a lot less. We take down your doors and drawer fronts, then degrease and sand every surface so the new finish actually grips. We fill dings, smooth things out, and spray the doors, drawers, and boxes for a clean, even coat with no brush marks. The result holds up to daily kitchen use, splashes, and wiping down. Works on kitchen and bathroom cabinets. We keep your space clean and put everything back when we are done. Free quotes, no obligation.",
       includes: [
         "Doors, drawer fronts, and boxes degreased and sanded",
         "Dings and gaps filled and smoothed",
@@ -187,13 +191,13 @@ export const site = {
         "Cleanup and reassembly when the work is done",
       ],
       image: {
-        src: "/images/service-cabinets.jpg",
+        src: "",
         alt: "A bright kitchen with crisp white cabinets and a clean, even finish",
         placeholderLabel: "Cabinets: refinished kitchen",
       },
       seoTitle: "Cabinet Refinishing | Jaws Painting",
       seoDescription:
-        "Cabinet refinishing in Southeast Michigan. We degrease, sand, and spray a smooth, durable finish on kitchen and bath cabinets. Licensed, insured, free quotes.",
+        "Cabinet refinishing in Southeast Michigan. We degrease, sand, and spray a smooth, durable finish on kitchen and bath cabinets. Free quotes.",
       icon: Brush,
     },
     {
@@ -202,7 +206,7 @@ export const site = {
       description:
         "We clean, sand, and stain decks, fences, and exterior wood across Southeast Michigan. The right stain or sealer locks out moisture and blocks the sun so your wood lasts longer and looks good.",
       longDescription:
-        "Outside, wood gets rough fast. Sun fades it, rain soaks it, and before long a deck or fence looks gray and worn. We bring it back. First we clean off the dirt, mildew, and old flaky finish. Then we sand the rough spots so the stain goes on even and smooth. Last, we stain or seal the wood to lock out moisture and block the sun. You pick the look, from a light natural tone to a deeper color. When we leave, your deck feels good underfoot and your fence looks sharp from the street. Licensed and insured, with free quotes.",
+        "Outside, wood gets rough fast. Sun fades it, rain soaks it, and before long a deck or fence looks gray and worn. We bring it back. First we clean off the dirt, mildew, and old flaky finish. Then we sand the rough spots so the stain goes on even and smooth. Last, we stain or seal the wood to lock out moisture and block the sun. You pick the look, from a light natural tone to a deeper color. When we leave, your deck feels good underfoot and your fence looks sharp from the street. Free quotes, no obligation.",
       includes: [
         "Clean off dirt, mildew, and old flaking finish",
         "Sand rough spots so the stain goes on even",
@@ -211,13 +215,13 @@ export const site = {
         "Decks, fences, railings, and other exterior wood",
       ],
       image: {
-        src: "/images/service-deck-fence.jpg",
+        src: "",
         alt: "A wood deck with a fresh stain and clean railings in a backyard",
         placeholderLabel: "Deck & fence: fresh stain",
       },
       seoTitle: "Deck & Fence Staining | Jaws Painting",
       seoDescription:
-        "Jaws Painting cleans, sands, and stains decks and fences across Southeast Michigan. Protect your wood from sun and rain. Licensed, insured, free quotes.",
+        "Jaws Painting cleans, sands, and stains decks and fences across Southeast Michigan. Protect your wood from sun and rain. Free quotes.",
       icon: Fence,
     },
     {
@@ -226,7 +230,7 @@ export const site = {
       description:
         "Holes, cracks, water damage, and bad seams patched and blended. We tape, mud, sand, and match the texture so the wall looks right and is ready for paint.",
       longDescription:
-        "Bad drywall stands out. We fix it right. We patch holes, fill cracks, cut out water damage, and re-tape seams that have let go. Then we mud, sand smooth, and match the texture so the repair disappears into the wall around it. We prime every patch so it takes paint evenly with no flashing or dull spots. By the time we leave, you should not be able to find where the damage was. We work clean, cover your floors and furniture, and keep the dust down. Licensed and insured, free quotes across Southeast Michigan.",
+        "Bad drywall stands out. We fix it right. We patch holes, fill cracks, cut out water damage, and re-tape seams that have let go. Then we mud, sand smooth, and match the texture so the repair disappears into the wall around it. We prime every patch so it takes paint evenly with no flashing or dull spots. By the time we leave, you should not be able to find where the damage was. We work clean, cover your floors and furniture, and keep the dust down. Free quotes across Southeast Michigan.",
       includes: [
         "Holes, dents, and cracks patched and filled",
         "Water-damaged drywall cut out and replaced",
@@ -236,13 +240,13 @@ export const site = {
         "Floors and furniture covered, dust kept down",
       ],
       image: {
-        src: "/images/service-drywall.jpg",
+        src: "",
         alt: "A smooth, freshly finished wall in an empty room, primed and ready for paint",
         placeholderLabel: "Drywall: repaired and paint-ready",
       },
       seoTitle: "Drywall Repair | Jaws Painting",
       seoDescription:
-        "Drywall repair in Southeast Michigan. We patch holes, cracks, and water damage, match the texture, and prime it paint-ready. Licensed, insured, free quotes.",
+        "Drywall repair in Southeast Michigan. We patch holes, cracks, and water damage, match the texture, and prime it paint-ready. Free quotes.",
       icon: Hammer,
     },
     {
@@ -251,7 +255,7 @@ export const site = {
       description:
         "Painting for offices, retail, and units across Southeast Michigan. We work around your hours, keep the job site clean, and get it done with minimal disruption to your business.",
       longDescription:
-        "We paint commercial spaces across Southeast Michigan. Offices, retail floors, rental units, hallways, and common areas. Your business has to keep running, so we plan the work around your hours, including early mornings, evenings, or weekends when it makes sense. We move and cover what needs covering, mask off fixtures, and keep walkways clear and safe. Surfaces get prepped right so the finish holds up to daily traffic. At the end of each day the space is clean and ready for your people and your customers. Licensed and insured, with free quotes.",
+        "We paint commercial spaces across Southeast Michigan. Offices, retail floors, rental units, hallways, and common areas. Your business has to keep running, so we plan the work around your hours, including early mornings, evenings, or weekends when it makes sense. We move and cover what needs covering, mask off fixtures, and keep walkways clear and safe. Surfaces get prepped right so the finish holds up to daily traffic. At the end of each day the space is clean and ready for your people and your customers. Free quotes, no obligation.",
       includes: [
         "Offices, retail, units, hallways, and common areas",
         "Work scheduled around your business hours, including nights and weekends",
@@ -261,7 +265,7 @@ export const site = {
         "Free written quote before we start",
       ],
       image: {
-        src: "/images/service-commercial.jpg",
+        src: "",
         alt: "A freshly painted open-plan office with clean walls, ready for the workday",
         placeholderLabel: "Commercial: finished office",
       },
@@ -285,7 +289,7 @@ export const site = {
     ],
     imageKey: "whyUs" as const,
     stats: [
-      { value: "Licensed", label: "& fully insured" },
+      { value: "Homes", label: "& businesses" },
       { value: "Free", label: "written quotes" },
       { value: "Local", label: "owner-run crew" },
     ] satisfies Stat[],
@@ -321,8 +325,8 @@ export const site = {
   },
 
   /* --- Service area ---
-   * TODO: replace with the client's actual towns. These are SE-Michigan
-   * placeholders near the 734 area so previews look populated — confirm before launch.
+   * Confirmed service area (same as Jaws Detailing): Ann Arbor, Ypsilanti, Saline,
+   * Canton, Plymouth, Belleville.
    */
   serviceArea: {
     eyebrow: "Where we work",
@@ -336,73 +340,110 @@ export const site = {
       "Canton",
       "Plymouth",
       "Belleville",
-      "Dexter",
-      "Chelsea",
-      "Milan",
     ],
   },
 
-  /* --- Reviews / social proof ---
-   * rating = null keeps the section HONEST: no star number, no count, until the
-   * client provides a real Google rating. Quotes are intentionally EMPTY
-   * placeholder slots — never invent a review. Paste real quotes + first names
-   * when the client provides them, and set `rating` to the real figure.
-   */
-  reviews: {
-    rating: null as number | null,
-    source: "Google",
-    // TODO: paste the client's one-click "leave a review" link (g.page/r/<id>/review).
-    reviewUrl: "",
-    reviewCtaLabel: "Leave us a review",
-    eyebrow: "Reviews",
-    heading: "What homeowners say about our work",
-    sub: "We let the work do the talking. As customers leave reviews, they'll show up right here.",
-    placeholderLabel: "Review coming soon",
-    placeholderHint: "Paste a real Google review in site.config.ts",
-    quotes: [
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-      { quote: "", author: "", context: "Google review" },
-    ] satisfies Review[],
-  },
-
   /* --- Hours ---
-   * TODO: confirm the client's real hours. Seeded with typical painting hours.
+   * Confirmed: open 7am to 8pm, seven days a week.
    */
   hours: {
-    monday: { open: "08:00", close: "18:00", closed: false },
-    tuesday: { open: "08:00", close: "18:00", closed: false },
-    wednesday: { open: "08:00", close: "18:00", closed: false },
-    thursday: { open: "08:00", close: "18:00", closed: false },
-    friday: { open: "08:00", close: "18:00", closed: false },
-    saturday: { open: "09:00", close: "15:00", closed: false },
-    sunday: { open: null, close: null, closed: true },
+    monday: { open: "07:00", close: "20:00", closed: false },
+    tuesday: { open: "07:00", close: "20:00", closed: false },
+    wednesday: { open: "07:00", close: "20:00", closed: false },
+    thursday: { open: "07:00", close: "20:00", closed: false },
+    friday: { open: "07:00", close: "20:00", closed: false },
+    saturday: { open: "07:00", close: "20:00", closed: false },
+    sunday: { open: "07:00", close: "20:00", closed: false },
   } as Record<string, DayHours>,
 
-  /* --- Photo manifest ---
-   * Maps each photo to a role. Set `src` once the real file is in /public/images.
-   * While `src` is "", the site shows a labeled placeholder for that role — no
-   * component edits needed to swap photos in. See PHOTOS.md for the full list
-   * (these four section photos PLUS one banner per service above).
+  /* --- Photo manifest (section photos) ---
+   * Real interior job photos. Service banners are intentionally empty (src: "")
+   * until there's a landscape photo per service — ServiceDetail omits the banner
+   * when src is "". See PHOTOS.md and the gallery below.
    */
   images: {
     hero: {
-      src: "/images/hero-exterior.jpg",
-      alt: "A freshly painted two-story home with gray siding, crisp trim, and a tidy front lawn",
-      placeholderLabel: "Hero: painted home exterior (the strongest shot)",
+      src: "/images/interior-living-room.jpg",
+      alt: "A freshly painted living room with light gray walls, a white fireplace, and clean trim",
+      placeholderLabel: "Hero: finished interior (strongest shot)",
     },
     whyUs: {
-      src: "/images/why-us.jpg",
-      alt: "A painter rolling a smooth, even coat onto an interior wall",
-      placeholderLabel: "Why us: painter at work",
+      src: "/images/interior-green-room.jpg",
+      alt: "An interior room painted a deep olive green, the carpet papered off and floors protected mid-job",
+      placeholderLabel: "Why us: prep and protection",
     },
     process: {
-      src: "/images/process-prep.jpg",
-      alt: "Close-up of a paint roller laying down a smooth, even coat",
-      placeholderLabel: "Process: prep and paint",
+      src: "/images/interior-open-room.jpg",
+      alt: "A room prepped for painting with drop protection laid down over the floor",
+      placeholderLabel: "Process: prep and protection",
     },
   } satisfies Record<string, SiteImage>,
+
+  /* --- Project gallery (real interior job photos, filterable by room type) --- */
+  gallery: {
+    eyebrow: "Our work",
+    heading: "Recent interior painting",
+    sub: "A look at real jobs across Southeast Michigan — living spaces, bathrooms, stairwells, and bold accent walls.",
+    categories: [
+      { key: "all", label: "All" },
+      { key: "living", label: "Living spaces" },
+      { key: "bath", label: "Bathrooms" },
+      { key: "stairs", label: "Stairwells & accent walls" },
+    ],
+    photos: [
+      { src: "/images/interior-living-room.jpg", category: "living", alt: "A freshly painted living room with light gray walls, a white fireplace, and clean trim" },
+      { src: "/images/interior-open-room.jpg", category: "living", alt: "An open room prepped for painting with drop protection down over the carpet" },
+      { src: "/images/interior-green-room.jpg", category: "living", alt: "A room painted a deep olive green with the floors papered off during the job" },
+      { src: "/images/bathroom-gray.jpg", category: "bath", alt: "A bathroom with light gray walls, a white vanity, and a glass shower" },
+      { src: "/images/bathroom-gold.jpg", category: "bath", alt: "A bathroom painted a warm golden yellow with a white vanity and a tiled shower" },
+      { src: "/images/stairwell-two-tone.jpg", category: "stairs", alt: "A stairwell landing with a dark accent wall next to a warm neutral wall" },
+      { src: "/images/stairwell-navy.jpg", category: "stairs", alt: "A stairwell with a deep navy accent wall, a white railing, and a wood floor" },
+      { src: "/images/staircase-hall.jpg", category: "stairs", alt: "A repainted staircase and upstairs hallway in light gray with black metal railings" },
+      { src: "/images/landing-navy.jpg", category: "stairs", alt: "An upstairs landing overlooking the staircase, with a navy accent wall and white trim" },
+      { src: "/images/staircase-purple.jpg", category: "stairs", alt: "A staircase with a deep plum accent wall on the lower level and a black railing" },
+    ],
+  },
+
+  /* --- FAQ ---
+   * Every answer traces to existing site copy or a client-confirmed fact.
+   * No prices, no timelines, no guarantees, no warranty claims, no license or
+   * insurance claims. See seo/PAINTING-SITE-PASS.md for the provenance table.
+   */
+  faq: {
+    eyebrow: "Questions",
+    heading: "Common questions",
+    sub: "If you don't see your question here, call or send us a message and we'll answer it straight.",
+    items: [
+      {
+        q: "How much does painting cost?",
+        a: "It depends on the space: how many rooms or how much exterior, the surfaces involved, how much prep and repair the walls need, and the finish you want. That's why we come out and look before quoting. You get a clear written price for free, up front, so you know what you're paying before we start.",
+      },
+      {
+        q: "Do you give free quotes?",
+        a: "Yes. Call or message us and we come take a look, talk through colors and what you want done, and give you a clear written price for free. There's no obligation.",
+      },
+      {
+        q: "Do you work in homes while we're living in them?",
+        a: "Yes. We cover your floors and furniture before we start, keep the work area tidy the whole time, and clean up before we leave. On drywall work we keep the dust down as well.",
+      },
+      {
+        q: "What surfaces and areas do you paint?",
+        a: "Inside: walls, ceilings, trim, and doors, plus kitchen and bathroom cabinets. Outside: siding, trim, doors, soffits, and fascia, plus decks, fences, railings, and other exterior wood. We also patch and repair drywall and prime it so it's ready for paint.",
+      },
+      {
+        q: "How do you protect my floors and furniture?",
+        a: "We cover your furniture and floors before a single brush moves, and mask off what needs masking. On commercial jobs we cover fixtures, floors, and equipment and keep walkways clear and safe.",
+      },
+      {
+        q: "Do you paint commercial spaces too?",
+        a: "Yes. We paint offices, retail floors, rental units, hallways, and common areas. Your business has to keep running, so we plan the work around your hours, including early mornings, evenings, or weekends when it makes sense.",
+      },
+      {
+        q: "What areas do you serve, and when can I reach you?",
+        a: "We paint homes and businesses in Ann Arbor, Ypsilanti, Saline, Canton, Plymouth, and Belleville. We're reachable seven days a week, 7:00 AM to 8:00 PM. Not sure if you're in our area? Give us a call or send a message.",
+      },
+    ],
+  },
 
   /* --- CRM wiring (do not improvise — see ContactForm.tsx) ---
    * Values come from env so a different deploy = different tenant with no code change.
@@ -439,7 +480,6 @@ export const site = {
   cta: {
     label: "Get a free quote",
     href: "/get-a-quote/",
-    afterReviewsKicker: "Ready to paint? Let's get you a price.",
     callLabel: "Call",
   },
 
@@ -503,19 +543,19 @@ export const site = {
         path: "/",
         title: "Jaws Painting | House Painters in Southeast Michigan",
         description:
-          "Jaws Painting handles interior and exterior painting for homes and businesses across Southeast Michigan. Licensed, insured, and free quotes. Get yours today.",
+          "Jaws Painting handles interior and exterior painting for homes and businesses across Southeast Michigan. Free quotes. Get yours today.",
       },
       services: {
         path: "/services/",
         title: "Painting Services | Jaws Painting Southeast Michigan",
         description:
-          "Interior and exterior painting for homes and commercial spaces in Southeast Michigan. Clean prep, neat lines, and walls done right. Licensed and insured.",
+          "Interior and exterior painting for homes and commercial spaces in Southeast Michigan. Clean prep, neat lines, and walls done right. Free written quotes.",
       },
       about: {
         path: "/about/",
         title: "About Us | Jaws Painting Southeast Michigan",
         description:
-          "Jaws Painting is a local painting crew serving Southeast Michigan. We show up on time, protect your home, and leave it looking sharp. Licensed and insured.",
+          "Jaws Painting is a local painting crew serving Southeast Michigan. We show up on time, protect your home, and leave it looking sharp. Free written quotes.",
       },
       quote: {
         path: "/get-a-quote/",

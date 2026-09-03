@@ -14,6 +14,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [smsConsent, setSmsConsent] = useState(false); // real checkbox, never auto-true
+  const [hpRef, setHpRef] = useState(""); // honeypot — humans never see or fill this
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -25,7 +26,7 @@ export default function ContactForm() {
       const res = await fetch(crm.url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // Body is EXACTLY these fields — do not add/rename (CRM contract).
+        // CRM contract fields plus the platform honeypot (hp_7d3a_ref). Do not rename.
         body: JSON.stringify({
           name,
           phone,
@@ -33,10 +34,12 @@ export default function ContactForm() {
           message,
           smsConsent,
           businessSlug: crm.businessSlug,
+          hp_7d3a_ref: hpRef,
         }),
       });
 
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      // TODO: Google Ads conversion event
       setStatus("success");
     } catch {
       // Keep the user's typed input on failure — never wipe it.
@@ -80,6 +83,21 @@ export default function ContactForm() {
       className="rounded-2xl border border-ink/10 bg-white p-6 shadow-card sm:p-8"
       noValidate
     >
+      {/* Honeypot: hidden from humans via the HTML `hidden` attribute (not CSS).
+          Bots that auto-fill every field trip this; real submissions leave it empty. */}
+      <div hidden>
+        <label htmlFor="hp_7d3a_ref">Do not fill this field</label>
+        <input
+          id="hp_7d3a_ref"
+          name="hp_7d3a_ref"
+          type="text"
+          autoComplete="off"
+          tabIndex={-1}
+          value={hpRef}
+          onChange={(e) => setHpRef(e.target.value)}
+        />
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelClass}>
