@@ -39,6 +39,7 @@ export default function ContactForm() {
       });
 
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      // TODO: Google Ads conversion event
       setStatus("success");
     } catch {
       // Keep the user's typed input on failure — never wipe it.

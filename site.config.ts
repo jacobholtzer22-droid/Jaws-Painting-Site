@@ -85,6 +85,10 @@ export const site = {
     shortName: "Jaws",
     tagline: "Interior & exterior painting in Southeast Michigan",
     phoneDisplay: "(734) 262-2365", // TODO: confirm the painting line
+    // TODO: Google Ads conversion event
+    // Click-tracking hook for every tel: link. phoneHref renders as a real <a>
+    // anchor in Header, Hero, CtaBand, Footer, ContactInfo, MobileCtaBar and
+    // ContactForm, so a delegated click handler can attach to a[href^="tel:"].
     phoneHref: "tel:+17342622365", // TODO: confirm the painting line
     region: "Southeast Michigan",
     email: "", // optional — add a public contact email if they want one shown
