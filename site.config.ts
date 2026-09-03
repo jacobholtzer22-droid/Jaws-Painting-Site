@@ -400,6 +400,47 @@ export const site = {
     ],
   },
 
+  /* --- FAQ ---
+   * Every answer traces to existing site copy or a client-confirmed fact.
+   * No prices, no timelines, no guarantees, no warranty claims, no license or
+   * insurance claims. See seo/PAINTING-SITE-PASS.md for the provenance table.
+   */
+  faq: {
+    eyebrow: "Questions",
+    heading: "Common questions",
+    sub: "If you don't see your question here, call or send us a message and we'll answer it straight.",
+    items: [
+      {
+        q: "How much does painting cost?",
+        a: "It depends on the space: how many rooms or how much exterior, the surfaces involved, how much prep and repair the walls need, and the finish you want. That's why we come out and look before quoting. You get a clear written price for free, up front, so you know what you're paying before we start.",
+      },
+      {
+        q: "Do you give free quotes?",
+        a: "Yes. Call or message us and we come take a look, talk through colors and what you want done, and give you a clear written price for free. There's no obligation.",
+      },
+      {
+        q: "Do you work in homes while we're living in them?",
+        a: "Yes. We cover your floors and furniture before we start, keep the work area tidy the whole time, and clean up before we leave. On drywall work we keep the dust down as well.",
+      },
+      {
+        q: "What surfaces and areas do you paint?",
+        a: "Inside: walls, ceilings, trim, and doors, plus kitchen and bathroom cabinets. Outside: siding, trim, doors, soffits, and fascia, plus decks, fences, railings, and other exterior wood. We also patch and repair drywall and prime it so it's ready for paint.",
+      },
+      {
+        q: "How do you protect my floors and furniture?",
+        a: "We cover your furniture and floors before a single brush moves, and mask off what needs masking. On commercial jobs we cover fixtures, floors, and equipment and keep walkways clear and safe.",
+      },
+      {
+        q: "Do you paint commercial spaces too?",
+        a: "Yes. We paint offices, retail floors, rental units, hallways, and common areas. Your business has to keep running, so we plan the work around your hours, including early mornings, evenings, or weekends when it makes sense.",
+      },
+      {
+        q: "What areas do you serve, and when can I reach you?",
+        a: "We paint homes and businesses in Ann Arbor, Ypsilanti, Saline, Canton, Plymouth, and Belleville. We're reachable seven days a week, 7:00 AM to 8:00 PM. Not sure if you're in our area? Give us a call or send a message.",
+      },
+    ],
+  },
+
   /* --- CRM wiring (do not improvise — see ContactForm.tsx) ---
    * Values come from env so a different deploy = different tenant with no code change.
    * NEXT_PUBLIC_BUSINESS_SLUG MUST equal the exact Neon `Business.slug` for this
