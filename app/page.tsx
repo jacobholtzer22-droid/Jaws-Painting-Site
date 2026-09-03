@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import HowItWorks from "@/components/HowItWorks";
+import Gallery from "@/components/Gallery";
 import ServiceArea from "@/components/ServiceArea";
 import CtaBand from "@/components/CtaBand";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <WhyUs />
       <HowItWorks />
+      <Gallery />
       <ServiceArea />
       <CtaBand />
     </>
