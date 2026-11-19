@@ -42,6 +42,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <head>
+        <script defer src="https://www.alignandacquire.com/t/s/jaws-painting.js"></script>
+      </head>
       <body className="bg-ink font-body text-bone antialiased">
         <a
           href="#main"
